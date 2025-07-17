@@ -34,3 +34,4 @@ fs.readFileSync('demo.txt', 'utf8');              // Read from file
 fs.appendFileSync('demo.txt', '\nNew Line');      // Append to file
 fs.unlinkSync('demo.txt');                        // Delete file
 
+### 🗂️ `fs` - File System
