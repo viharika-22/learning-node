@@ -34,4 +34,56 @@ fs.readFileSync('demo.txt', 'utf8');              // Read from file
 fs.appendFileSync('demo.txt', '\nNew Line');      // Append to file
 fs.unlinkSync('demo.txt');                        // Delete file
 
-### 🗂️ `fs` - File System
+---
+
+### 🧠 `os`- Operating System Info
+const os = require('os');
+
+os.userInfo();     // Get current user info
+os.uptime();       // System uptime (in seconds)
+os.type();         // OS name (e.g., "Windows_NT")
+os.platform();     // Platform (e.g., "win32")
+os.totalmem();     // Total memory
+os.freemem();      // Free memory
+
+---
+
+### 📂 path - Path Utilities
+
+
+path.basename(__filename); // current file name
+path.dirname(__filename);  // directory name
+path.extname(__filename);  // file extension
+path.join(__dirname, 'files', 'notes.txt')
+
+---
+
+### http – Create HTTP Server
+
+http.createServer((req, res) => {
+  res.end('Hello from Node server!');
+});
+
+ℹ️ In real-world applications, we use Express for simplicity.
+
+---
+
+### events – EventEmitter
+
+const EventEmitter = require('events');
+const emitter = new EventEmitter();
+
+emitter.on('greet', (name) => {
+  console.log(`Hello, ${name}`);
+});
+
+emitter.emit('greet', 'Viharika');
+
+---
+
+### crypto – For Hashing/Encryption
+
+crypto.createHash('sha256').update('password').digest('hex')
+
+<img width="923" height="566" alt="image" src="https://github.com/user-attachments/assets/940735c7-730e-4a35-97fc-d34f8b81e4ad" />
+
